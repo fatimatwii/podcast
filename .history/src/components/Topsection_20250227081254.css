@@ -1,0 +1,89 @@
+.image {
+    width: 80% !important;
+  }
+  
+  .btnSub {
+    margin: 1rem auto;
+    display: block;
+    color: white;
+    background-color: rgb(0, 102, 255);
+    padding: 1rem 3rem;
+    border-radius: 30px;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    text-align: center;
+  }
+  
+  .btnSub:hover {
+    color: black;
+    background-color: white;
+  }
+  
+  h1 {
+    letter-spacing: 5px;
+    background: linear-gradient(to left, white, rgb(0, 102, 255));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .slideshow-container {
+    position: relative;
+    width: 100%;
+    max-width: 550px;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  }
+  
+  .slideshow-track {
+    display: flex;
+    width: max-content;
+  }
+  
+  .slideshow-image {
+    width: 100%;
+    height: auto;
+    flex-shrink: 0;
+    object-fit: cover;
+  }
+  
+  
+  section {
+    padding-top: 1rem;
+  }
+  
+  /* Email Subscription Styles */
+  .email-subscription {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .email-input {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    width: 220px;
+    font-size: 14px;
+  }
+  
+  .email-btn {
+    background-color: #0066ff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: background 0.3s ease;
+    letter-spacing: 1px;
+  }
+  
+  .email-btn:hover {
+    background-color: white;
+    color: black;
+  }
+  *{
+    letter-spacing: 1px;
+  }

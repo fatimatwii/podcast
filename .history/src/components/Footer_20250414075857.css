@@ -1,0 +1,118 @@
+.footer-container {
+  background-color: #706f6f3b;
+  color: white;
+  margin-top: 2rem;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px;
+  flex-wrap: wrap; 
+}
+
+.logo-section {
+  flex: 1;
+}
+
+.podcast-logo {
+  width: 120px; 
+  height: auto;
+}
+
+.links-section {
+  flex: 2;
+  text-align: center;
+}
+
+.email-text {
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+.social-icons {
+  display: flex; 
+  justify-content: center;
+  gap: 15px; 
+  align-items: center; 
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.social-icons a {
+  pointer-events: auto;
+  cursor: pointer;
+  color: white;
+  font-size: 24px;
+  transition: color 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+  color: rgb(0, 102, 255);
+}
+
+.spotify-section {
+ 
+  margin-top: 10px;
+}
+
+.spotify-section a {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.spotify-section a:hover {
+  color: #1ed760;
+}
+
+.spotify-section .fa-spotify {
+  font-size: 2rem; 
+}
+
+.spotify-section span {
+  margin-left: 8px;
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  .footer-content {
+    flex-direction: row;
+  }
+
+  .spotify-section {
+   
+    margin-left: 20px; 
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer-content {
+    flex-direction: row;
+    justify-content: space-between; 
+  }
+
+  .spotify-section {
+    margin-top: 20px;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    flex-basis: 100%; 
+  }
+}
+
+.backsection {
+  text-align: center;
+  padding: 10px 0;
+  font-size: 14px;
+  background-color: #a0a0a03b;
+  color: rgb(0, 102, 255);
+  letter-spacing: 3px;
+}
