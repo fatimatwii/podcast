@@ -27,11 +27,12 @@ const Topsection = () => {
       {/* Center content (moved to bottom) */}
       <div className="relative z-10 flex flex-col items-center justify-end text-center h-full px-6 pb-32">
         <h1 className="text-5xl md:text-7xl font-extrabold tracking-wide bg-gradient-to-r from-white to-blue-400 bg-clip-text text-transparent leading-tight drop-shadow-lg">
-          PRINCIPAL<br />DAOUD PODCAST
-        </h1>
-
-        <p className="text-2xl md:text-2xl mt-6 text-gray-200 leading-relaxed arabic-text">
-          بودكاست المدير التربوي<br />الدكتور داوُد حرب
+          Dr. Daoud Harb <br />  </h1>
+          <h3 className="text-2xl md:text-3xl font-extrabold tracking-wide bg-gradient-to-r from-white to-blue-400 bg-clip-text text-transparent leading-tight drop-shadow-lg">الدكتور داوُد حرب</h3>
+        
+            
+        <p className="text-2xl md:text-2xl mt-6 text-gray-200 leading-relaxed arabic-text ">
+         تابع معنا  بودكاست المدير التربوي <br /> على المنصات التالية
         </p>
       </div>
 

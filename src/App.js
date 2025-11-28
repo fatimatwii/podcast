@@ -14,10 +14,11 @@ const App = () => {
       <div className="">
         <section id="home"><Topsection /></section>
         <section id="description"><Description /></section>
-           <section id="video"><VideoGallery /></section>
         <section id="podcast"><Episodes /></section>
-      <section id="RecruitingSection"><RecruitingSection /></section>
-     
+        <section id="video"><VideoGallery /></section>
+
+        <section id="RecruitingSection"><RecruitingSection /></section>
+
         <section id="email"><EmailSubscribe /></section>
       </div>
       <Footer />
