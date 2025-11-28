@@ -32,13 +32,13 @@ const Topsection = () => {
         <h3 className="text-2xl sm:text-3xl md:text-3xl font-extrabold tracking-wide bg-gradient-to-r from-white to-blue-400 bg-clip-text text-transparent leading-tight drop-shadow-lg mt-2">
           الدكتور داوُد حرب
         </h3>
-        <p className="text-lg sm:text-xl md:text-2xl mt-4 text-gray-200 leading-relaxed arabic-text">
+        <p className="text-lg sm:text-xl md:text-2xl mt-4 text-gray-200 leading-relaxed arabic-text ">
           تابع معنا بودكاست المدير التربوي <br /> على المنصات التالية
         </p>
       </div>
 
       {/* Bottom social buttons */}
-      <div className="relative z-10 flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 px-4 pb-16 sm:pb-14">
+      <div className="relative z-10 flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 px-4 pb-80 sm:pb-14">
         <a
           href="https://www.youtube.com/@PrincipalDaoudPodcast"
           target="_blank"

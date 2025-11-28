@@ -60,11 +60,11 @@ const Episodes = () => {
 
       <div className="flex flex-col md:flex-row items-center px-4 py-10">
 
-        <div className="flex justify-center w-full md:w-1/2 animate-fadeInUp pb-8">
+        <div className="flex justify-center w-full md:w-1/2 sm:w-1/2 animate-fadeInUp pb-8">
           <img
             src={podcast}
             alt="Podcast Cover"
-            className="w-10/12 md:w-full max-w-sm rounded-2xl shadow-xl"
+            className="w-10/12 sm:w-3/4 md:w-full max-w-sm rounded-2xl shadow-xl"
           />
         </div>
 
