@@ -132,6 +132,9 @@
   .video-image{
     height: 10rem;
   }
+  .mobile-card{
+    max-width: 300px;
+  }
 }
 
 @media (max-width: 480px) {

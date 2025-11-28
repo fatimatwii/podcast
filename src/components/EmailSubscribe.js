@@ -2,27 +2,53 @@ import React, { useState } from "react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import subscribeImage from "../assets/images/IMG-20250129-WA0003.jpg";
-import emailjs from "emailjs-com"; 
+import emailjs from "emailjs-com";
+
+const SPECIAL_EPISODES = [
+  {
+    id: "TdiQ1mOdbws",
+    title: "Special Episode 1",
+  },
+  {
+    id: "lfqBrvF2tk4",
+    title: "Special Episode 4",
+  },
+  {
+    id: "ClMGJYVI-sw",
+    title: "Special Episode 2",
+  },
+  {
+    id: "BeOMA0cBnjY",
+    title: "Special Episode 3",
+  },
+  {
+    id: "7mLxzB6J8QQ",
+    title: "Special Episode 4",
+  },
+   {
+    id: "3YH_oYhdhuc",
+    title: "Special Episode 4",
+  }, 
+   
+];
 
 const EmailSubscribe = () => {
   const [email, setEmail] = useState("");
 
   const handleSubscribe = (e) => {
-    e.preventDefault(); 
+    e.preventDefault();
 
- 
     if (!email) {
       alert("Please enter a valid email.");
       return;
     }
 
-   
     emailjs
       .send(
-        "service_go0662h", 
-        "template_yu3t1kg", 
-        { email: email }, 
-        "stkAL0E8Ja7I3EDyf" 
+        "service_go0662h",
+        "template_yu3t1kg",
+        { email: email },
+        "stkAL0E8Ja7I3EDyf"
       )
       .then(
         (response) => {
@@ -35,37 +61,61 @@ const EmailSubscribe = () => {
         }
       );
 
-    setEmail(""); 
+    setEmail("");
   };
 
   return (
-    <div className="relative w-full max-w-md mx-auto p-4">
-      {/* Background Image */}
-      <img
-        src={subscribeImage}
-        alt="Subscribe"
-        className="w-full h-auto rounded-lg shadow-lg"
-      />
+    <div className="flex flex-col lg:flex-row w-full max-w-7xl mx-auto p-4 gap-8">
+      {/* Left: Subscription Form */}
+      <div className="relative lg:w-1/3">
+        <img
+          src={subscribeImage}
+          alt="Subscribe"
+          className="w-full h-auto rounded-lg shadow-lg"
+        />
+        <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-80 text-white p-4 sm:p-6 rounded-b-lg">
+          <h2 className="text-2xl font-semibold mb-3 text-center lg:text-left">
+            Subscribe to the Mailing List
+          </h2>
+          <div className="flex flex-col sm:flex-row items-center gap-6">
+            <Input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Enter your email"
+              className="w-full p-2 border border-gray-300 rounded-md text-black"
+            />
+            <Button
+              className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md w-full sm:w-auto"
+              onClick={handleSubscribe}
+            >
+              Subscribe
+            </Button>
+          </div>
+        </div>
+      </div>
 
-      {/* Content Overlay */}
-      <div className="absolute bottom-0 left-0 right-0 black bg-opacity-100 text-white p-4 sm:p-6 rounded-b-lg">
-        <h2 className="text-2xl font-semibold mb-3 text-center">
-          Subscribe to the Mailing List
-        </h2>
-        <div className="flex flex-col sm:flex-row items-center gap-3">
-          <Input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="Enter your email"
-            className="w-full p-2 border border-gray-300 rounded-md text-black"
-          />
-          <Button
-            className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md w-full sm:w-auto"
-            onClick={handleSubscribe}
-          >
-            Subscribe
-          </Button>
+      {/* Right: Special Episodes */}
+      <div className="lg:w-3/4 flex flex-col">
+        <h3 className="text-xl font-semibold mb-4 text-center lg:text-left">
+          Special Episodes
+        </h3>
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4 pl-6">
+          {SPECIAL_EPISODES.map((ep) => (
+            <a
+              key={ep.id}
+              href={`https://www.youtube.com/watch?v=${ep.id}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-lg overflow-hidden shadow-md hover:scale-105 transform transition duration-200"
+            >
+              <img
+                src={`https://img.youtube.com/vi/${ep.id}/hqdefault.jpg`}
+                alt={ep.title}
+                className="w-full h-auto object-cover"
+              />
+            </a>
+          ))}
         </div>
       </div>
     </div>
