@@ -97,10 +97,10 @@ const EmailSubscribe = () => {
 
       {/* Right: Special Episodes */}
       <div className="lg:w-3/4 flex flex-col">
-        <h3 className="text-xl font-semibold mb-4 text-center lg:text-left">
+        <h3 className="text-xl font-semibold mb-4 text-center ">
           Special Episodes
         </h3>
-        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4 pl-6">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4 md:pl-6">
           {SPECIAL_EPISODES.map((ep) => (
             <a
               key={ep.id}
