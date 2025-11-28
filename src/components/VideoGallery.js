@@ -49,7 +49,7 @@ const VideoGallery = () => {
   };
 
   return (
-   <div className="p-20">
+   <div className="pt-20 p-10">
   <h2 className="title text-2xl font-bold mb-6 text-center">
     مع داوُد, حلقات توجيهية تربوية للأهل والمهتمين
   </h2>

@@ -42,7 +42,7 @@ const RecruitingSection = () => {
 
     emailjs
       .send(
-        "service_go0662h", 
+        "service_go0662h",
         "template_yu3t1kg",
         {
           name: formData.name,
@@ -80,8 +80,8 @@ const RecruitingSection = () => {
           </h2>
 
           <p className="text-gray-700 mb-6 text-justify">
-           Submit your CV and join our professional talent network.
-We help connect skilled individuals with organizations seeking qualified candidates.
+            Submit your CV and join our professional talent network.
+            We help connect skilled individuals with organizations seeking qualified candidates.
           </p>
 
           {/* Arabic Text 
@@ -116,8 +116,8 @@ We help connect skilled individuals with organizations seeking qualified candida
               />
             </div>
 
-            <div>
-              <label className="font-semibold text-gray-800">
+            <div className="w-full max-w-full">
+              <label className="block font-semibold text-gray-800 text-sm sm:text-base mb-1">
                 Upload CV (PDF or Word)
               </label>
               <Input
@@ -125,9 +125,10 @@ We help connect skilled individuals with organizations seeking qualified candida
                 type="file"
                 accept=".pdf,.doc,.docx"
                 onChange={handleChange}
-                className="mt-1"
+                className="mt-1 w-full sm:w-auto"
               />
             </div>
+
 
             <Button
               type="submit"
