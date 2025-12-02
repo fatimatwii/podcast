@@ -91,7 +91,7 @@ const Episodes = () => {
           </p>
         </div>
       </div>
-  <h4 className="section-title">Main Episodes</h4>
+  <h4 className="section-title">الحلقات كاملة من الموسمين الأوّل والثاني</h4>
       <div className="videos-container">
       
         {videos.map((video, index) => (

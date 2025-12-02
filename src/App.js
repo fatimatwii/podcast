@@ -17,7 +17,7 @@ const App = () => {
         <section id="podcast"><Episodes /></section>
         <section id="video"><VideoGallery /></section>
 
-        <section id="RecruitingSection"><RecruitingSection /></section>
+        {/* <section id="RecruitingSection"><RecruitingSection /></section> */}
 
         <section id="email"><EmailSubscribe /></section>
       </div>

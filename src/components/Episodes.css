@@ -95,7 +95,7 @@
 .video-thumbnail,
 .cover-image {
   width: 100%;
-  height: auto;
+   height: 180px;       
   object-fit: cover;
   padding-top: 0.01rem; border-radius: 8px;
 }
@@ -149,6 +149,7 @@
 .arabic-text{
   font-weight: bold !important;
   padding: 1rem;
+  height: 85px !important;
 }
 .latest-videos-section {
   margin-top: 3rem;
@@ -279,4 +280,18 @@
   background: #ff0000;
   color: white;
   text-decoration: none;
+}
+.arabic-text {
+  font-weight: bold !important;
+  padding: 1rem;
+  text-align: center;
+
+  /* FIX TITLE HEIGHT */
+  height: 150px;                /* adjust if needed */
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;       /* max 2 lines */
+  -webkit-box-orient: vertical;
+
+  line-height: 1.4;
 }

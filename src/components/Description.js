@@ -37,7 +37,7 @@ function Description() {
     >
       {/* RIGHT SECTION (Description) - Appears FIRST on mobile */}
       <motion.div
-        className="md:w-1/3 order-1 md:order-3 text-right arabic-text"
+        className="md:w-1/3 order-1 md:order-3 text-right "
         dir="rtl"
         initial={{ opacity: 0, x: 50 }}
         animate={{ opacity: isVisible ? 1 : 0, x: isVisible ? 0 : 50 }}
@@ -47,13 +47,13 @@ function Description() {
           المدير الدكتور داوُد حرب
         </h2>
 
-        <p className="text-md leading-relaxed mb-4 text-justify">
-          هو أكاديمي وخبير تربوي ومحاضر في LIU وUSJ، يتمتع بخبرة طويلة في
+        <p className="text-md leading-relaxed mb-4 text-justify font-bold">
+          هو أكاديمي وخبير تربوي ومحاضر في الجامعة اللبنانية الدولي LIU و جامعة القديس يوسف في بيروت USJ، يتمتع بخبرة طويلة في
           التعليم الثانوي والجامعي. يحمل دكتوراه في التربية وزمالة من جامعة
           هارفرد، ومتخصص في إدارة الموارد البشرية في الجامعة اللبنانية الأميركية.
         </p>
 
-        <p className="text-md leading-relaxed text-justify">
+        <p className="text-md leading-relaxed text-justify font-bold">
           يقود إدارة ثانوية أجيال – الدوير منذ 2019، ويعمل على تطويرها وفق
           مبادئ التعليم الحديث ومهارات القرن الحادي والعشرين. وهو مؤسّس ومقدّم
           بودكاست المدير التربوي لنشر الوعي التربوي في لبنان والعالم العربي.
@@ -86,7 +86,7 @@ function Description() {
         </h3>
 
         <p
-          className="text-lg md:text-xl mb-4 arabic-text leading-relaxed text-right text-justify"
+          className="text-lg md:text-xl mb-4  leading-relaxed text-right text-justify"
           dir="rtl"
         >
           احجز جلسة اسـتشارة تـربوية مجانية مع المدير التربوي الدكتور داوُد حرب،

@@ -6,30 +6,30 @@ import emailjs from "emailjs-com";
 
 const SPECIAL_EPISODES = [
   {
-    id: "TdiQ1mOdbws",
+    id: "-0IlHg18VFg",
     title: "Special Episode 1",
   },
   {
-    id: "lfqBrvF2tk4",
+    id: "FDY0cNSKwaA",
     title: "Special Episode 4",
   },
   {
-    id: "ClMGJYVI-sw",
+    id: "88ETMlTNccY",
     title: "Special Episode 2",
   },
   {
-    id: "BeOMA0cBnjY",
+    id: "3kv3r8g9Yr4",
     title: "Special Episode 3",
   },
   {
-    id: "7mLxzB6J8QQ",
+    id: "MHd-5_UoYu0",
     title: "Special Episode 4",
   },
-   {
-    id: "3YH_oYhdhuc",
+  {
+    id: "68G6h4ZU7jQ",
     title: "Special Episode 4",
-  }, 
-   
+  },
+
 ];
 
 const EmailSubscribe = () => {
@@ -109,11 +109,14 @@ const EmailSubscribe = () => {
               rel="noopener noreferrer"
               className="rounded-lg overflow-hidden shadow-md hover:scale-105 transform transition duration-200"
             >
-              <img
-                src={`https://img.youtube.com/vi/${ep.id}/hqdefault.jpg`}
-                alt={ep.title}
-                className="w-full h-auto object-cover"
-              />
+              <div className="relative w-full aspect-video bg-white">
+                <img
+                  src={`https://img.youtube.com/vi/${ep.id}/hqdefault.jpg`}
+                  alt={ep.title}
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+              </div>
+
             </a>
           ))}
         </div>

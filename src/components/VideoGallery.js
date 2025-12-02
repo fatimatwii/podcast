@@ -3,7 +3,7 @@ import axios from "axios";
 import "./Episodes.css";
 import { FaShareAlt, FaPlay } from "react-icons/fa";
 
-const API_KEY = "AIzaSyDxes6N139K-uodH4_d7lazdhj-Yv3c5hE"; 
+const API_KEY = "AIzaSyDxes6N139K-uodH4_d7lazdhj-Yv3c5hE";
 const PLAYLIST_ID = "PLopc-tIyly6YwY9fZCnRB2_qR4bMMsKqQ";
 
 const VideoGallery = () => {
@@ -49,13 +49,13 @@ const VideoGallery = () => {
   };
 
   return (
-   <div className="pt-20 p-10">
-  <h2 className="title text-2xl font-bold mb-6 text-center">
-    مع داوُد, حلقات توجيهية تربوية للأهل والمهتمين
-  </h2>
+    <div className="pt-20 p-10">
+      <h2 className="title text-2xl font-bold mb-6 text-center">
+        مع داوُد, حلقات توجيهية تربوية للأهل والمهتمين
+      </h2>
 
-  {/* Responsive Grid */}
-  <div className="
+      {/* Responsive Grid */}
+      <div className="
       grid 
       grid-cols-1 
       sm:grid-cols-2 
@@ -64,46 +64,51 @@ const VideoGallery = () => {
       xl:grid-cols-4 
       gap-6
   ">
-    {videos.map((video) => (
-      <div
-        key={video.id}
-        className="bg-white rounded-2xl shadow-md overflow-hidden flex flex-col"
-      >
-        <a
-          href={`https://www.youtube.com/watch?v=${video.id}`}
-          target="_blank"   
-          rel="noopener noreferrer"
-        >
-          <img
-            className="w-full h-56 object-fill"
-            src={`https://img.youtube.com/vi/${video.id}/hqdefault.jpg`}
-            alt={video.title}
-          />
-        </a>
-
-        <div className="p-4 flex justify-center items-center">
-          <button
-            onClick={() => watchVideo(video.id)}
-            className="text-blue-600 hover:text-blue-800 text-2xl mx-4"
+        {videos.map((video) => (
+          <div
+            key={video.id}
+            className="bg-white rounded-2xl shadow-md overflow-hidden flex flex-col"
           >
-            <FaPlay />
-          </button>
+            <a
+              href={`https://www.youtube.com/watch?v=${video.id}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                className="w-full h-50 object-contain rounded-md"
+                src={`https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`}
+                onError={(e) => {
+                  e.target.src = `https://img.youtube.com/vi/${video.id}/hqdefault.jpg`
+                }}
+                alt={video.title}
+              />
 
-          <button
-            onClick={() => shareVideo(video.id)}
-            className="text-green-600 hover:text-green-800 text-2xl mx-4"
-          >
-            <FaShareAlt />
-          </button>
-        </div>
 
-        <h3 className="video-title text-center font-semibold mt-2 px-2">
-          {video.title}
-        </h3>
+            </a>
+
+            <div className="p-4 flex justify-center items-center">
+              <button
+                onClick={() => watchVideo(video.id)}
+                className="text-blue-600 hover:text-blue-800 text-2xl mx-4"
+              >
+                <FaPlay />
+              </button>
+
+              <button
+                onClick={() => shareVideo(video.id)}
+                className="text-green-600 hover:text-green-800 text-2xl mx-4"
+              >
+                <FaShareAlt />
+              </button>
+            </div>
+
+            <h3 className="video-title text-center font-semibold mt-2 px-2">
+              {video.title}
+            </h3>
+          </div>
+        ))}
       </div>
-    ))}
-  </div>
-</div>
+    </div>
 
   );
 };
