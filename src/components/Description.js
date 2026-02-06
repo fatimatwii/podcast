@@ -3,14 +3,6 @@ import { motion } from "framer-motion";
 import principleDaud from "../assets/images/ai-portrait.png";
 import { Link } from "react-router-dom";
 
-const specialVideoLinks = [
-  "https://youtu.be/TdiQ1mOdbws?si=UC0ORDJCtX3c6MWp",
-  "https://youtu.be/6NQauIARWt0?si=C88alcymHdUseB0e",
-  "https://youtu.be/XwVWtHvJbaY?si=nUBJLHaO2rydlXiT",
-  "https://youtu.be/sj2hDoo68PU?si=i66mUM-Bg2-b7OTE",
-  "https://youtu.be/Z1bLPbskK4c?si=22Xqm6S6cFDwWGmc",
-];
-
 function Description() {
   const sectionRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);

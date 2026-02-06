@@ -5,8 +5,6 @@ import {
   FaYoutube,
   FaTiktok,
   FaLinkedin,
-  FaSpotify,
-  FaSoundcloud,
 } from "react-icons/fa";
 
 const Header = () => {
