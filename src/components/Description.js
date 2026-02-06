@@ -56,7 +56,7 @@ function Description() {
     to="/portfolio"
     className="inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold px-6 py-3 rounded-md transition"
   >
-  See Portfolio
+ Portfolio
   </Link>
 </div>
 
