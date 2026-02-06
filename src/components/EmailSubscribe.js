@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
-import subscribeImage from "../assets/images/IMG-20250129-WA0003.jpg";
+import subscribeImage from "../assets/images/5997022123866049370.jpg";
 import emailjs from "emailjs-com";
 
 const SPECIAL_EPISODES = [
@@ -67,7 +67,8 @@ const EmailSubscribe = () => {
   return (
     <div className="flex flex-col lg:flex-row w-full max-w-7xl mx-auto p-4 gap-8">
       {/* Left: Subscription Form */}
-      <div className="relative lg:w-1/3">
+      <div className="relative w-full h-[400px] lg:h-auto lg:w-1/3">
+
         <img
           src={subscribeImage}
           alt="Subscribe"

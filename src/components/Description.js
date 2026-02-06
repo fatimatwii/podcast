@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import principleDaud from "../assets/images/ai-portrait.png";
+import { Link } from "react-router-dom";
 
 const specialVideoLinks = [
   "https://youtu.be/TdiQ1mOdbws?si=UC0ORDJCtX3c6MWp",
@@ -58,6 +59,15 @@ function Description() {
           مبادئ التعليم الحديث ومهارات القرن الحادي والعشرين. وهو مؤسّس ومقدّم
           بودكاست المدير التربوي لنشر الوعي التربوي في لبنان والعالم العربي.
         </p>
+        <div className="mt-6 text-right">
+  <Link
+    to="/portfolio"
+    className="inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold px-6 py-3 rounded-md transition"
+  >
+  See Portfolio
+  </Link>
+</div>
+
       </motion.div>
 
       {/* CENTER IMAGE */}
@@ -85,20 +95,29 @@ function Description() {
           Educational Consultation
         </h3>
 
-        <p
-          className="text-lg md:text-xl mb-4  leading-relaxed text-right text-justify"
-          dir="rtl"
-        >
-          احجز جلسة اسـتشارة تـربوية مجانية مع المدير التربوي الدكتور داوُد حرب،
-          للحصول على توجيه مهني ودعم أكاديمي واستشارات متخصّصة في المجال
-          التعليمي بالإضافة إلى إدارة المدارس و المؤسسات التربوية.
-        </p>
+  <p
+  className="text-lg md:text-xl mb-8 leading-relaxed text-right text-justify"
+  dir="rtl"
+>
+  احجز{" "}
+  <span className="bg-blue-400 px-1 rounded">
+    اسـتشارة تـربوية مجانية
+  </span>
+  {" "}مع المدير التربوي الدكتور داوُد حرب، للحصول على توجيه مهني ودعم أكاديمي
+  واستشارات متخصّصة في المجال التعليمي بالإضافة إلى إدارة المدارس والمؤسسات
+  التربوية.
+</p>
 
-        <p className="text-lg md:text-xl mb-6 leading-relaxed text-justify">
-         Schedule a personalized educational free consultation with Principal Dr.
-  Daoud Harb for professional guidance, academic support, and specialized
-  educational mentorship, including school and institutional leadership.
-        </p>
+<p className="text-lg md:text-xl mb-8 leading-relaxed text-justify">
+  Schedule an{" "}
+  <span className="bg-blue-400 px-1 rounded">
+    educational free consultation
+  </span>
+  {" "}with Principal Dr. Daoud Harb for professional guidance, academic support,
+  and specialized educational mentorship, including school and institutional
+  leadership.
+</p>
+
 
         {/* Buttons Centered */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center text-center">

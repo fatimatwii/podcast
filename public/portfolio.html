@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Daoud Harb - Training Services & Courses</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Josefin Sans', 'Noto Kufi Arabic', sans-serif !important;
+            background-color: rgba(30, 30, 30, 0.733) !important;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .bilingual {
+            margin-bottom: 8px;
+        }
+
+        .en {
+            display: block;
+        }
+
+        .ar {
+            display: block;
+            direction: rtl;
+            font-family: 'Noto Kufi Arabic', sans-serif !important;
+            color: #555;
+            margin-top: 5px;
+        }
+
+        h1 .ar,
+        h2 .ar,
+        h3 .ar,
+        h4 .ar {
+            color: inherit;
+            opacity: 0.9;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #2d02ee, rgba(0, 0, 0, 0.76));
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero h1 {
+            font-size: 2.8em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            opacity: 0.95;
+        }
+
+        .hero .ar {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .section {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .section h2 {
+            color: #2d02ee;
+            font-size: 2.2em;
+            margin-bottom: 15px;
+            border-bottom: 3px solid rgba(0, 102, 255, 0.479);
+            padding-bottom: 10px;
+        }
+
+        .section-intro {
+            font-size: 1.1em;
+            color: #555;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .service-card {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border-radius: 12px;
+            padding: 25px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 5px solid #2d02ee;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(102, 126, 234, 0.3);
+        }
+
+        .service-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+
+        .service-card h3 {
+            color: #2d02ee;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+
+        .service-card ul {
+            list-style: none;
+            margin: 15px 0;
+        }
+
+        .service-card ul li {
+            padding: 5px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .service-card ul li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: rgba(0, 102, 255, 0.479);
+            font-weight: bold;
+        }
+
+        .target-group {
+            background: rgba(102, 126, 234, 0.1);
+            border-radius: 8px;
+            padding: 10px;
+            margin-top: 15px;
+            font-size: 0.9em;
+        }
+
+        .target-group strong {
+            color: rgba(0, 102, 255, 0.863);
+        }
+
+        .training-card {
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .training-card:hover {
+            border-color: #2d02ee;
+            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.2);
+        }
+
+        .training-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .training-icon {
+            font-size: 2.5em;
+            margin-right: 15px;
+        }
+
+        .training-title {
+            flex: 1;
+        }
+
+        .training-title h4 {
+            color: #2d02ee;
+            font-size: 1.4em;
+            margin-bottom: 5px;
+        }
+
+        .sessions-badge {
+            background: linear-gradient(135deg, #2d02ee, rgba(0, 102, 255, 0.479));
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: bold;
+        }
+
+        .training-description {
+            color: #555;
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #2d02ee, rgba(0, 102, 255, 0.479));
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+            border-radius: 15px;
+            margin-top: 40px;
+        }
+
+        .cta-section h2 {
+            color: white;
+            border: none;
+            margin-bottom: 20px;
+        }
+
+        .cta-section .ar {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .cta-button {
+            background: white;
+            color: #2d02ee;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 10px;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2em;
+            }
+
+            .section {
+                padding: 25px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hero">
+        <h1>
+            <span class="en">Dr. Daoud Harb</span>
+        </h1>
+        <p class="bilingual">
+            <span class="en">Professional Development & Training Services</span>
+
+        </p>
+        <h1><span class="ar">الدكتور داود حرب</span></h1>
+
+        <p class="bilingual">
+          
+            <span class="ar">مقرّرات ورش تدريبة</span>
+        </p>
+        <p style="font-size: 0.95em; margin-top: 10px;" class="bilingual">
+            <span class="en">Transforming Education Through Excellence in Leadership, Teaching, and Innovation</span>
+        </p>
+    </div>
+
+    <div class="container">
+        <!-- Leadership & Management Services -->
+        <div class="section">
+            <h2>
+                <span class="en">🎓 Educational Leadership & workshops</span>
+                <span class="ar">🎓 دورات في القيادة التربوية</span>
+            </h2>
+            <p class=" bilingual">
+                <span class="ar">ملاحظة: هذه الورش متوفرة كتدريب خاص للأفراد العاملين في الإدارات العليا سواء المدرسية
+                    أو الجامعية أو على مستوى المؤسسات</span>
+            </p>
+            <p class="section-intro bilingual">
+                <span class="en">Empowering school leaders with strategic insights and transformative management
+                    practices</span>
+            </p>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🏛️</div>
+                    <h3>
+                        <span class="en">Educational Leadership</span>
+                        <span class="ar">القيادة التربوية المعاصرة (10 ساعات حضوري)</span>
+                    </h3>
+                    <p class="bilingual">
+                        <span class="en">Develop visionary leadership skills to guide your institution through complex
+                            educational landscapes and drive meaningful change.</span>
+                        <span class="ar">طوّر مهارات القيادة التربوية المعاصرة لتمكين مؤسستك من الريادة في البيئات
+                            التعليمية المعقدّة وصناعة تغيير حقيقي.</span>
+                    </p>
+                    <ul>
+                        <li class="bilingual">
+                            <span class="en">Vision and mission development</span>
+                            <span class="ar">تطوير الرؤية والرسالة</span>
+                        </li>
+                        <li class="bilingual">
+                            <span class="en">Leading change initiatives</span>
+                            <span class="ar">قيادة التغيير</span>
+                        </li>
+                        <li class="bilingual">
+                            <span class="en">Building collaborative cultures</span>
+                            <span class="ar">بناء مؤسسة تشاركية</span>
+                        </li>
+                        <li class="bilingual">
+                            <span class="en">Crisis management and resilience</span>
+                            <span class="ar">إدارة الأزمات وتعزيز القدرة على الصمود/span>
+                        </li>
+                    </ul>
+                    <div class="target-group bilingual">
+                        <strong class="en">Target Groups:</strong>
+                        <strong class="ar">الفئات المستهدفة:</strong>
+                        <span class="en">Administrators, Principals, Educational Leaders</span>
+                        <span class="ar">القيادات التربوية والادارية</span>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">📊</div>
+                    <h3>
+                        <span class="en">Strategic Planning</span>
+                        <span class="ar">التخطيط الاستراتيجي (10 ساعات حضوري)</span>
+                    </h3>
+                    <p class="bilingual">
+                        <span class="en">Master the art of strategic thinking to position your school for long-term
+                            success and sustainable growth.</span>
+                        <span class="ar">أتقن فنّ التفكير الاستراتيجي لتهيئة مدرستك لتحقيق نجاح طويل الأمد ونمو
+                            مستدام.</span>
+                    </p>
+                    <ul>
+                        <li class="bilingual">
+                            <span class="en">SWOT analysis and environmental scanning</span>
+                            <span class="ar">تحليل البيئة المحيطة</span>
+                        </li>
+                        <li class="bilingual">
+                            <span class="en">Goal setting and KPI development</span>
+                            <span class="ar">تحديد الأهداف وتطوير المؤشرات </span>
+                        </li>
+                        <li class="bilingual">
+                            <span class="en">Resource allocation strategies</span>
+                            <span class="ar">تخصيص الموارد</span>
+                        </li>
+                        <li class="bilingual">
+                            <span class="en">Continuous improvement frameworks</span>
+                            <span class="ar">أطر التحسين المستمر</span>
+                        </li>
+                    </ul>
+                    <div class="target-group bilingual">
+                        <strong class="en">Target Groups:</strong>
+                        <strong class="ar">الفئات المستهدفة:</strong>
+                        <span class="en">Administrators, School Board Members, Department Heads</span>
+                        <span class="ar">القيادات التربوية والادارية ورؤساء الأقسام</span>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">👥</div>
+                    <h3>
+                        <span class="en">Human Resources Management in Schools</span>
+                        <span class="ar">إدارة الموارد البشرية في المدارس (15 ساعة حضوري وأونلاين)</span>
+                    </h3>
+                    <p class="bilingual">
+                        <span class="en">Optimize your institution's most valuable asset—your people—through effective
+                            HR practices and talent development.</span>
+                        <span class="ar">استثمر في العنصر البشري من خلال ممارسات فعالة لإدارة الموارد البشرية وتنمية
+                            المواهب </span>
+                    </p>
+                    <ul>
+                        <li class="bilingual">
+                            <span class="en">Recruitment and retention strategies</span>
+                            <span class="ar">استراتيجيات التوظيف والحفاظ على الموظفين</span>
+                        </li>
+                        <li class="bilingual">
+                            <span class="en">Performance management systems</span>
+                            <span class="ar">تقييم الأداء</span>
+                        </li>
+                        <li class="bilingual">
+                            <span class="en">Professional development planning</span>
+                            <span class="ar"> التطوير المستمر</span>
+                        </li>
+                        <li class="bilingual">
+                            <span class="en">Building positive school culture</span>
+                            <span class="ar">بناء بيئة مدرسية إيجابية</span>
+                        </li>
+                    </ul>
+                    <div class="target-group bilingual">
+                        <strong class="en">Target Groups:</strong>
+                        <strong class="ar">الفئات المستهدفة:</strong>
+                        <span class="en">Administrators, HR Personnel, Principals</span>
+                        <span class="ar">الإداريون، موظفو الموارد البشرية، المديرون</span>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">👥</div>
+                    <h3>
+                        <span class="en">Inclusion management</span>
+                        <span class="ar">إدارة دمج ذوي الاحتياجات الخاصّة (20 ساعة حضوري وأونلاين)</span>
+                    </h3>
+                    <p class="bilingual">
+                        <span class="en"></span>
+                        <span class="ar">تأسيس وتعزيز البيئة الدامجة في المدارس </span>
+                    </p>
+                    <ul>
+                        <li class="bilingual">
+                            <span class="en">Inclusive policy development</span>
+                            <span class="ar">تطوير سياسات الدمج التربوي في المدارس</span>
+                        </li>
+                        <li class="bilingual">
+                            <span class="en">Support diverse learning needs</span>
+                            <span class="ar">تأهيل العاملين لتأمين الدعم اللازم للتلاميذ</span>
+                        </li>
+                        <li class="bilingual">
+                            <span class="en">Equity - driven decision making</span>
+                            <span class="ar"> اتخاذ قرارات عادلة</span>
+                        </li>
+                        <li class="bilingual">
+                            <span class="en">Child protection and safeguarding</span>
+                            <span class="ar">حماية الطفل وصونه</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- TEFL & Teaching Methods -->
+        <div class="section">
+            <h2>
+                <span class="en">📚 Teaching Methods Courses</span>
+                <span class="ar">📚 مقررات طرائق التعليم</span>
+            </h2>
+            <p class="section-intro bilingual">
+                <span class="en">Research-based teaching strategies to transform your English language classroom</span>
+            </p>
+
+            <div class="training-card">
+                <div class="training-header">
+                    <div class="training-icon">🌍</div>
+                    <div class="training-title">
+                        <h4>
+                            <span class="en">Teaching English Language Methods</span>
+                            <span class="ar">طرائق تعليم اللغة الانجليزية</span>
+                        </h4>
+                        <span class="sessions-badge">Course 20-25 Sessions (Online | ) | workshop 10 hrs/2 days
+                            Inperson</span>
+                    </div>
+                </div>
+                <p class="training-description bilingual">
+                    <span class="en">A comprehensive program designed to equip teachers with evidence-based strategies
+                        for supporting diverse English language learners. Learn to identify language acquisition stages,
+                        lower affective filters, and create culturally responsive classrooms that honor students'
+                        linguistic backgrounds while accelerating their English proficiency.</span>
+                    <span class="en">Note:This course can be customized.</span>
+
+                    <span class="ar">برنامج تدريب متكامل يهدف الى تمكين معلمي اللغة الانجليزية, من الصف الأول حتى
+                        العاشر, من استراتيجيات قائمة على الأدلة العلمية لدعم متعلمي اللغة الإنجليزية بمستوياتهم
+                        المختلفة. يتعرف المشاركون الى مراحل اكتساب اللغة، وخفض الحواجز الانفعالية المؤثرة على التعليم،
+                        بناء صفوف مستجيبة ثقافياً للغة،تسريع نمو كفاءة التلاميذ في اللغة الانجليزية وغيرها من
+                        الأهداف.</span>
+                </p>
+                <div class="target-group bilingual">
+                    <strong class="en">Target Groups:</strong>
+                    <strong class="ar">الفئات المستهدفة:</strong>
+                    <span class="en">Teachers, ESL/EFL Educators</span>
+                    <span class="ar"> معلمو اللغة الإنجليزية</span>
+                </div>
+            </div>
+
+            <div class="training-card">
+                <div class="training-header">
+                    <div class="training-icon">📖</div>
+                    <div class="training-title">
+                        <h4>
+                            <span class="en">Active Teaching of Reading</span>
+                            <span class="ar">استراتيجيات تعليم القراءة الفاعلة</span>
+                        </h4>
+                        <span class="sessions-badge">10-15 Sessions | Inperson</span>
+                    </div>
+                </div>
+                <p class="training-description bilingual">
+                    <span class="en">Explore major approaches to reading instruction including phonics, whole language,
+                        and balanced literacy. Master strategies for developing word recognition, comprehension, and
+                        critical thinking skills. Learn to integrate digital technology and promote independent reading
+                        habits that last a lifetime.</span>
+                    <span class="ar">تعرّف الى أبرز المقاربات في تعليم القراءة واتقان استراتيجيات تنمية مهارات التعرف
+                        على الكلمات والفهم القرائي والتفكير النقدي. دمج التكنولوجيا الرقيمية وتعزيز القراءة المستقلة.
+                </p>
+                <div class="target-group bilingual">
+                    <strong class="en">Target Groups:</strong>
+                    <strong class="ar">الفئات المستهدفة:</strong>
+                    <span class="en">Teachers, Elementary & Secondary Educators</span>
+                    <span class="ar">المعلمون في المرحلة الابتدائية والثانوية</span>
+                </div>
+            </div>
+
+            <div class="training-card">
+                <div class="training-header">
+                    <div class="training-icon">✍️</div>
+                    <div class="training-title">
+                        <h4>
+                            <span class="en">Teaching Advanced Writing</span>
+                            <span class="ar">مهارات تعليم الكتابة المتقدّمة</span>
+                        </h4>
+                        <span class="sessions-badge">10-15 Sessions | Inperson</span>
+                    </div>
+                </div>
+                <p class="training-description bilingual">
+                    <span class="en">Transform your writing instruction through mini-lessons, writing workshops, and
+                        shared approaches. Learn to guide students through the writing process, from brainstorming to
+                        revision, while teaching writing across content areas to improve literacy outcomes
+                        school-wide.</span>
+                    <span class="ar">تعليم الكتابة من خلال الدروس القصيرة وورش الكتابة وأساليب التعلم التشاركي . يتعلم
+                        المشاركون توجيه الطلاب خلال عملية الكتابة.</span>
+                </p>
+                <div class="target-group bilingual">
+                    <strong class="en">Target Groups:</strong>
+                    <span class="en">Teachers, Language Arts Educators, Content Area Teachers</span>
+                </div>
+            </div>
+
+            <div class="training-card">
+                <div class="training-header">
+                    <div class="training-icon">🎧</div>
+                    <div class="training-title">
+                        <h4>
+                            <span class="en">Teaching Listening strategies</span>
+                            <span class="ar">استراتيجيات تعليم النصوص المسموعة</span>
+                        </h4>
+                        <span class="sessions-badge">10-15 Sessions | Inperson</span>
+                    </div>
+                </div>
+                <p class="training-description bilingual">
+                    <span class="en">Develop effective techniques for teaching this often-neglected skill. Learn to
+                        design authentic listening activities, implement podcasts and multimedia resources, and assess
+                        listening comprehension across various contexts and purposes.</span>
+                    <span class="ar">تطوير تقنيات فعالة لتدريس هذه المهارة التي كثيرًا ما يتم اغفالها. تعلم كيفية تصميم
+                        أنشطة استماع حقيقية وذات معنى، وتوظيف الوسائط المتعددة والبودكاست، وتقييم الفهم الاستماعي عبر
+                        سياقات وأغراض تعليمية متنوعة.</span>
+                </p>
+                <div class="target-group bilingual">
+                    <strong class="en">Target Groups:</strong>
+                    <span class="en">Teachers, EFL/ESL Educators</span>
+                </div>
+            </div>
+
+            <div class="training-card">
+                <div class="training-header">
+                    <div class="training-icon">💬</div>
+                    <div class="training-title">
+                        <h4>
+                            <span class="en">Teaching of English Speaking</span>
+                            <span class="ar">تعليم النطق باللغة الانجليزية</span>
+                        </h4>
+                        <span class="sessions-badge">10-15 Sessions | Inperson (this course can be customized and
+                            personalized)</span>
+                    </div>
+                </div>
+                <p class="training-description bilingual">
+                    <span class="en">Master the art of organizing dynamic speaking activities that build fluency and
+                        confidence. Learn role-play, simulation techniques, and authentic communication tasks. Includes
+                        preparation for IELTS and TOEFL speaking components with effective assessment strategies.</span>
+                    <span class="ar">أتقن فنّ تنظيم أنشطة التحدث الديناميكية التي تعزز الطلاقة والثقة لدى الطلاب. تعلم
+                        تقنيات المهام التواصلية الحقيقية. قد يشمل هذا البرنامج التحضير لأقسام التحدّث في اختبارات TOFEL
+                        و IELTS.</span>
+                </p>
+                <div class="target-group bilingual">
+                    <strong class="en">Target Groups:</strong>
+                    <span class="en">Teachers, Communication Skills Instructors, Test Prep Educators</span>
+                </div>
+            </div>
+
+            <div class="training-card">
+                <div class="training-header">
+                    <div class="training-icon">📊</div>
+                    <div class="training-title">
+                        <h4>
+                            <span class="en">Assessment and Evaluation Couse</span>
+                            <span class="ar">مقرّر التقييم والتقويم المدرسي</span>
+                        </h4>
+                        <span class="sessions-badge">Workshop-Based Inperson | ورشة عمل حضوري</span>
+                    </div>
+                </div>
+                <p class="training-description bilingual">
+                    <span class="en">Master diverse assessment strategies for English language learners including
+                        formative, summative, and continuous assessment techniques. Learn to design fair grading
+                        systems, create rubrics, and use assessment data to inform instruction and support student
+                        growth.</span>
+                    <span class="ar">يقدم هذا المقرر استراتيجيات التقييم المتنوعة لكافة المواد،واساليب التقويم المستمر.
+                        تصميم أنظمة تقييم عادلة، إنشاء جداول المعايير، واستخدام بيانات التقييم لتوجيه التعليم ودعم نمو
+                        الطلاب بشكل فعال</span>
+                </p>
+                <div class="target-group bilingual">
+                    <strong class="en">Target Groups:</strong>
+                    <strong class="ar">الفئات المستهدفة:</strong>
+                    <span class="en">Teachers and Coordinators</span>
+                    <span class="ar">المعلمين والمنسقين</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Standardized Testing -->
+        <div class="section">
+            <h2>
+                <span class="en">🎯 Standardized Testing Preparation</span>
+                <span class="ar">🎯 دورات التحضير للاختبارات الموحدة</span>
+            </h2>
+            <p class="section-intro bilingual">
+                <span class="en">Expert preparation for high-stakes exams that open doors to academic
+                    opportunities</span>
+                <span class="ar">ملاحظة: معظم هذه الدورات تعطى بشكل فردي للمتعلمّ وحسب الحاجة الفردية</span>
+            </p>
+
+            <div class="training-card">
+                <div class="training-header">
+                    <div class="training-icon">📚</div>
+                    <div class="training-title">
+                        <h4>
+                            <span class="en">SAT I, SAT II & PSAT Preparation</span>
+                        </h4>
+                        <span class="sessions-badge">30-45 Sessions, Online - Inperson - Customized </span>
+                    </div>
+                </div>
+                <p class="training-description">
+                    Comprehensive SAT preparation focusing on Reading, Writing and Language, and Essay sections using
+                    proven strategies from top test prep resources. Includes SAT II preparation for English Literature
+                    and American History. Designed for both students and instructors who want to teach these courses
+                    effectively.
+                </p>
+                <div class="target-group">
+                    <strong>Target Groups:</strong> Students (Grades 9-12), Teachers, Test Prep Instructors
+                </div>
+            </div>
+
+            <div class="training-card">
+                <div class="training-header">
+                    <div class="training-icon">🌐</div>
+                    <div class="training-title">
+                        <h4>TOEFL / IELTS / ACT Preparation</h4>
+                        <span class="sessions-badge">1 - 30 Sessions | Online - Inperson - customized based on
+                            individual
+                            needs</span>
+                    </div>
+                </div>
+                <p class="training-description">
+                    Intensive training covering all four language skills with test-specific strategies. TOEFL
+                    preparation includes specialized software training, while IELTS covers both Academic and General
+                    modules. Programs can be customized using official guides or specially compiled materials for
+                    accelerated learning.
+                </p>
+                <div class="target-group">
+                    <strong>Target Groups:</strong> Students, Teachers, Adult Learners, International Students
+                </div>
+            </div>
+        </div>
+
+        <!-- Special Education -->
+        <div class="section">
+            <h2>
+                <span class="en">🌟 Special Education & Inclusive Learning</span>
+                <span class="ar">🌟 ورش ومقرّارات الدمج والتربية المختصة</span>
+            </h2>
+            <p class="section-intro">Creating inclusive environments where every student can thrive</p>
+
+            <div class="training-card">
+                <div class="training-header">
+                    <div class="training-icon">🎨</div>
+                    <div class="training-title">
+                        <h4>
+                            <span class="en">Introduction to Special Education & Special Needs</span>
+                            <span class="ar">مقدّمة إلى علوم التربية المختصة والتعامل مع ذوي الاحتياجات الخاصّة</span>
+                        </h4>
+                        <span class="sessions-badge">20-40 Sessions or workshop (20hrs/ 5 days)</span>
+                    </div>
+                </div>
+                <p class="training-description">
+                    <span class="en">Comprehensive training covering identification and support strategies for diverse
+                        learners including those with intellectual disabilities, learning disabilities, ADD/ADHD,
+                        behavioral disorders, autism, communication disorders, and gifted learners. Learn to develop
+                        personalized intervention strategies and adapt your teaching to meet individual needs. Modules
+                        can be selected based on specific interests.</span>
+                    <span class="ar">تدريب شامل يغطي استراتيجيات تحديد ودعم المتعلمين المتنوعين، بما في ذلك ذوي
+                        الاحتياجات الخاصّة والصعوبات التعليمية واضطرابات السلوك وفرط الحركة والتوحد واضطرابات التواصل
+                        والمتعلمين الموهوبين</span>
+                </p>
+                <div class="target-group">
+                    <strong>Target Groups:</strong> Teachers, Special Education Instructors, Shadow Teachers,
+                    Administrators
+                </div>
+            </div>
+
+            <div class="training-card">
+                <div class="training-header">
+                    <div class="training-icon">🧸</div>
+                    <div class="training-title">
+                        <h4>
+                            <span class="en">Role of Play in Child Learning & Development</span>
+                            <span class="ar">دور اللعب في تعليم الطفل وتطوره</span>
+                        </h4>
+
+                        <span class="sessions-badge">20-30 Sessions or Workshop 10Hrs/ 2 Days</span>
+                    </div>
+                </div>
+                <p class="training-description">
+                    <span class="en"> Explore the critical role of play in cognitive, social, and emotional development.
+                        Learn about
+                        cooperative play, rough and tumble play, risk play, and creative approaches to drawing and
+                        learning.
+                        Understand how to support playful learning environments and effectively monitor developmental
+                        progress through play-based assessment.</span>
+                    <span class="ar">استكشاف الدور الحيوي للعب في التطور المعرفي والاجتماعي والعاطفي. التعرف الى أنواع
+                        اللعب وكيفية دعم بيئات التعلم القائمة على اللعب والتعليم القائم على اللعب.</span>
+                </p>
+                <div class="target-group">
+                    <strong class="en">Target Groups:</strong>
+                    <strong class="ar">الفئات المستهدفة:</strong>
+                    <span class="en">Early Childhood Educators, Teachers, Parents</span>
+                    <span class="ar">معلمو رياض الأطفال، الأهل.</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Business English & Communication -->
+        <div class="section">
+            <h2>
+
+                <span class="en">💼 Professional Business Communication</span>
+                <span class="ar">مهارات التواصل الفعّال</span>
+            </h2>
+            <p class="section-intro">Professional communication skills for the modern workplace</p>
+
+            <div class="training-card">
+                <div class="training-header">
+                    <div class="training-icon">🤝</div>
+                    <div class="training-title">
+                        <h4>
+                            <span class="en">Communication & Business Skills Course (English)</span>
+                            <span class="ar">مقرّر التواصل في عالم الأعمال</span>
+                        </h4>
+                        <span class="sessions-badge">20-30 Sessions (Online | Inperson)</span>
+                    </div>
+                </div>
+                <p class="training-description">
+                    <span class="en">Master professional communication in today's global business environment. Topics
+                        include corporate
+                        ethics, web etiquette, cultural diversity, audience analysis, and avoiding plagiarism. Learn to
+                        write effective business correspondence including letters, emails, proposals, memos, and reports
+                        while developing cross-cultural communication competence.</span>
+                    <span class="ar">أتقن التواصل المحترف في بيئة الأعمال العالمية اليوم. آداب التواصل والتعامل ومهارته،
+                        تحليل الجمهور، المراسلات الادارية والتجارية الفعالة.</span>
+                </p>
+                <div class="target-group">
+                    <strong>Target Groups:</strong> Students, Teachers, Business Professionals, Administrative Personnel
+                </div>
+            </div>
+
+            <div class="training-card">
+                <div class="training-header">
+                    <div class="training-icon">🏢</div>
+                    <div class="training-title">
+                        <h4>
+                            <span class="en">English for Human Resources</span>
+                            <span class="ar">اللغة الانجليزية لاختصاص الموارد البشرية</span>
+                        </h4>
+                        <span class="sessions-badge">Customizable Duration | المدة قابلة للتخصيص حسب الحاجة (Online |
+                            Inperson)</span>
+                    </div>
+                </div>
+                <p class="training-description">
+                    <span class="en">Specialized course covering HR terminology, multinational corporations, and
+                        essential HR functions
+                        in English. Learn to build portfolios, write professional CVs, create online profiles, conduct
+                        interviews, develop negotiation skills, and write comprehensive reports. Tailored to meet
+                        specific
+                        organizational needs.</span>
+                    <span class="ar">دورة متخصصة تغطي مصطلحات الموارد البشرية والشركات متعددة الجنسيات، والوظائف
+                        الأساسية في هذا المجال باللغة الانجليزية . تعلم كيفية إعداد ملف شخصي وكتابة سيرة ذاتية وإجراء
+                        المقابلات وكتابة التقارير.</span>
+                </p>
+                <div class="target-group">
+                    <strong>Target Groups:</strong> HR Professionals, Administrative Personnel, Career Services Staff
+                </div>
+            </div>
+
+
+        </div>
+
+        <!-- Special Workshops & Seminars -->
+        <div class="section">
+            <h2>⚡ Special Workshops & Power Seminars</h2>
+            <p class="section-intro">High-impact sessions for immediate classroom transformation</p>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🌟</div>
+                    <h3>Top 10 Secrets to Great Teaching</h3>
+                    <span class="sessions-badge">2 Sessions (Online | Inperson)</span>
+                    <p style="margin: 15px 0;">An engaging, attention-grabbing seminar revealing the most effective
+                        teaching strategies that separate great teachers from good ones. Walk away with actionable
+                        techniques you can implement immediately.</p>
+                    <div class="target-group">
+                        <strong>Target Groups:</strong> Teachers (All Levels)
+                    </div>
+                </div>
+
+
+
+                <div class="service-card">
+                    <div class="service-icon">📝</div>
+                    <h3>Review & Test Like a Pro</h3>
+                    <span class="sessions-badge">1 Session (Online | Inperson)</span>
+                    <p style="margin: 15px 0;">Master the art of creating effective assessments. Learn top strategies
+                        for building tests that truly measure learning, designing friendly yet rigorous exams, and
+                        implementing powerful review techniques.</p>
+                    <div class="target-group">
+                        <strong>Target Groups:</strong> Teachers (All Subjects)
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🎯</div>
+                    <h3>Manage Your Classroom Like a Pro</h3>
+                    <span class="sessions-badge">Seminar (Online | Inperson)</span>
+                    <p style="margin: 15px 0;">Simple yet powerful strategies for maintaining classroom control. Topics:
+                        managing large classes, addressing misbehaviors, correcting mistakes constructively, proactive
+                        teaching, building learning communities, and supporting troubled students.</p>
+                    <div class="target-group">
+                        <strong>Target Groups:</strong> Teachers (All Levels), New Teachers
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Educational Technology -->
+        <div class="section">
+            <h2>💻 Educational Technology Integration</h2>
+            <p class="section-intro">Harness technology to create engaging, modern learning experiences</p>
+
+            <div class="training-card">
+                <div class="training-header">
+                    <div class="training-icon">🥽</div>
+                    <div class="training-title">
+                        <h4>
+                            <span class="en">VR & AR in Education</span>
+                            <span class="ar">الواقع الافتراضي والواقع المعزّز في التعليم</span>
+                        </h4>
+                        <span class="sessions-badge">3-5 Sessions</span>
+                    </div>
+                </div>
+                <p class="training-description">
+                    Explore the frontier of immersive learning technologies. Introduction to Virtual Reality and
+                    Augmented Reality equipment, deeper immersion techniques, using Nearpod and Google Cardboards,
+                    integrating VR in remote learning, and practical applications of AR in language lessons and writing
+                    instruction.
+                </p>
+                <div class="target-group">
+                    <strong>Target Groups:</strong> Teachers (All Subjects), Educational Technology Enthusiasts
+                </div>
+            </div>
+        </div>
+        <!-- Call to Action -->
+        <div class="cta-section">
+            <h2>Ready to Transform Your Educational Practice?</h2>
+            <p style="font-size: 1.2em; margin-bottom: 30px;">
+                Let's discuss how these training programs can be customized to meet your institution's unique needs
+            </p>
+            <button class="cta-button" onclick="window.location.href='mailto:d.david.harb@gmail.com'">📧 Email Dr.
+                Harb</button>
+            <button class="cta-button" onclick="window.location.href='tel:+96170837052'">📱 Call Now</button>
+            <button class="cta-button" onclick="window.location.href='https://www.daoudharb.com'">🌐 Visit
+                Website</button>
+            <p style="margin-top: 30px; font-size: 0.95em;">
+                All programs can be customized in content, duration, and delivery format to suit your needs
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

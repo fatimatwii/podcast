@@ -69,17 +69,28 @@ const Episodes = () => {
         </div>
 
         <div className="w-full md:w-1/2 space-y-6">
+          <h2
+            className="text-[1.7rem] leading-8 text-right direction-rtl text-justify animate-fadeIn font-bold"
+            dir="rtl"
+          >
+
+            في موسمه الثاني...
+          </h2>
           <p
             className="text-[1.1rem] leading-8 text-right direction-rtl text-justify animate-fadeIn"
             dir="rtl"
           >
-           
-            البودكاست التربوي الأوّل من نوعه في لبنان والعالم العربي.
+            البودكاست التربوي{" "}
+            <span className="underline underline-offset-4">
+              الأوّل من نوعه
+            </span>
+           {" "} في لبنان والعالم العربي.{" "}
             نريده أن يكون منصّةً مميّزة عن غيرها في بثّ الوعي التربوي
             والثقافة التعلّمية لدى أجيالنا في لبنان والعالم العربي،
             وأن يكون منارةً للمعلمين والمتعلمين، ومصدراً موثوقاً للأهل
             يستقون منه ما هو مفيد لمستقبل أولادهم وحاضرهم.
           </p>
+
 
           <p className="text-[1.1rem] leading-8 text-left text-justify animate-fadeIn delay-300">
             Introducing the first educational podcast of its kind in Lebanon and the Arab world:
@@ -91,9 +102,9 @@ const Episodes = () => {
           </p>
         </div>
       </div>
-  <h4 className="section-title">الحلقات كاملة من الموسمين الأوّل والثاني</h4>
+      <h4 className="section-title">الحلقات كاملة من الموسمين الأوّل والثاني</h4>
       <div className="videos-container">
-      
+
         {videos.map((video, index) => (
           <div key={index} className="mobile-card">
             <a href={video.url} target="_blank" rel="noopener noreferrer">
