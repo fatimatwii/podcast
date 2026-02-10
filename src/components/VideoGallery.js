@@ -5,6 +5,7 @@ import { FaShareAlt, FaPlay } from "react-icons/fa";
 
 const API_KEY = "AIzaSyDxes6N139K-uodH4_d7lazdhj-Yv3c5hE";
 const PLAYLIST_ID = "PLopc-tIyly6YwY9fZCnRB2_qR4bMMsKqQ";
+const PLAYLIST_URL = `https://www.youtube.com/playlist?list=${PLAYLIST_ID}`;
 
 const VideoGallery = () => {
   const [videos, setVideos] = useState([]);
@@ -56,15 +57,15 @@ const VideoGallery = () => {
 
       {/* Responsive Grid */}
       <div className="
-      grid 
-      grid-cols-1 
-      sm:grid-cols-2 
-      md:grid-cols-3 
-      lg:grid-cols-3 
-      xl:grid-cols-4 
-      gap-6
-  ">
-        {videos.map((video) => (
+        grid 
+        grid-cols-1 
+        sm:grid-cols-2 
+        md:grid-cols-3 
+        lg:grid-cols-3 
+        xl:grid-cols-4 
+        gap-6
+      ">
+        {videos.slice(0, 4).map((video) => (
           <div
             key={video.id}
             className="bg-white rounded-2xl shadow-md overflow-hidden flex flex-col"
@@ -78,12 +79,10 @@ const VideoGallery = () => {
                 className="w-full h-50 object-contain rounded-md"
                 src={`https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`}
                 onError={(e) => {
-                  e.target.src = `https://img.youtube.com/vi/${video.id}/hqdefault.jpg`
+                  e.target.src = `https://img.youtube.com/vi/${video.id}/hqdefault.jpg`;
                 }}
                 alt={video.title}
               />
-
-
             </a>
 
             <div className="p-4 flex justify-center items-center">
@@ -108,8 +107,19 @@ const VideoGallery = () => {
           </div>
         ))}
       </div>
-    </div>
 
+      {/* Button to go to full playlist */}
+      <div className="flex justify-center mt-8">
+        <a
+          href={PLAYLIST_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-red-600 hover:bg-red-700 text-white font-bold px-10 py-3 rounded-full transition"
+        >
+          مشاهدة جميع الحلقات على يوتيوب
+        </a>
+      </div>
+    </div>
   );
 };
 

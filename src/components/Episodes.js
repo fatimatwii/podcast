@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react"; 
 import axios from "axios";
 import { FaShare, FaYoutube } from "react-icons/fa";
 import "./Episodes.css";
@@ -6,6 +6,7 @@ import podcast from "../assets/images/6030841143031350591.jpg";
 
 const API_KEY = "AIzaSyDxes6N139K-uodH4_d7lazdhj-Yv3c5hE";
 const PLAYLIST_ID = "PLopc-tIyly6aIyXcqDL0VuHqSCpyQ3Xzq";
+const PLAYLIST_URL = `https://www.youtube.com/playlist?list=${PLAYLIST_ID}`;
 
 const Episodes = () => {
   const [videos, setVideos] = useState([]);
@@ -73,7 +74,6 @@ const Episodes = () => {
             className="text-[1.7rem] leading-8 text-right direction-rtl text-justify animate-fadeIn font-bold"
             dir="rtl"
           >
-
             في موسمه الثاني...
           </h2>
           <p
@@ -83,14 +83,12 @@ const Episodes = () => {
             البودكاست التربوي{" "}
             <span className="underline underline-offset-4">
               الأوّل من نوعه
-            </span>
-           {" "} في لبنان والعالم العربي.{" "}
+            </span>{" "} في لبنان والعالم العربي.{" "}
             نريده أن يكون منصّةً مميّزة عن غيرها في بثّ الوعي التربوي
             والثقافة التعلّمية لدى أجيالنا في لبنان والعالم العربي،
             وأن يكون منارةً للمعلمين والمتعلمين، ومصدراً موثوقاً للأهل
             يستقون منه ما هو مفيد لمستقبل أولادهم وحاضرهم.
           </p>
-
 
           <p className="text-[1.1rem] leading-8 text-left text-justify animate-fadeIn delay-300">
             Introducing the first educational podcast of its kind in Lebanon and the Arab world:
@@ -102,10 +100,11 @@ const Episodes = () => {
           </p>
         </div>
       </div>
-      <h4 className="section-title">الحلقات كاملة من الموسمين الأوّل والثاني</h4>
-      <div className="videos-container">
 
-        {videos.map((video, index) => (
+
+      <div className="videos-container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        {videos.slice(0, 4).map((video, index) => (
           <div key={index} className="mobile-card">
             <a href={video.url} target="_blank" rel="noopener noreferrer">
               <img
@@ -127,6 +126,18 @@ const Episodes = () => {
             </div>
           </div>
         ))}
+      </div>
+
+      {/* Button to go to full playlist */}
+      <div className="flex justify-center mt-8">
+        <a
+          href={PLAYLIST_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-red-600 hover:bg-red-700 text-white font-bold px-10 py-3 rounded-full transition"
+        >
+          مشاهدة جميع الحلقات من الموسمين الأوّل والثاني
+        </a>
       </div>
     </section>
   );
