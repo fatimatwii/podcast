@@ -36,7 +36,7 @@ const Portfolio = () => {
       <div className="portfolio-lock black">
         <form onSubmit={handleSubmit} className="lock-box">
           <h2>🔒 Private Portfolio</h2>
-          <p>Please enter your access code</p>
+          <p>عليكم التواصل مع دكتور داود للحصول على رمز الدخول</p>
 
           <input
             type="password"
