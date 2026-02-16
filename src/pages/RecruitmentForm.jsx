@@ -1,7 +1,15 @@
-import React, { useState } from "react";
+
+
+
+import React, { useState, useEffect } from "react";
+
 import emailjs from "emailjs-com";
 
 const RecruitmentForm = () => {
+  useEffect(() => {
+  window.scrollTo({ top: 0, behavior: "instant" });
+}, []);
+
   const [personal, setPersonal] = useState({
     fullName: "",
     birthPlace: "",
