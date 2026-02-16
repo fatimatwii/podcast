@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import principleDaud from "../assets/images/ai-portrait.png";
 import Training from "../assets/images/IMG-20260205-WA0005.jpg";
-import { Link } from "react-router-dom";
 
 function Description() {
   const sectionRef = useRef(null);
