@@ -1,14 +1,10 @@
-
-
-
 import React, { useState, useEffect } from "react";
-
 import emailjs from "emailjs-com";
 
 const RecruitmentForm = () => {
   useEffect(() => {
-  window.scrollTo({ top: 0, behavior: "instant" });
-}, []);
+    window.scrollTo({ top: 0, behavior: "instant" });
+  }, []);
 
   const [personal, setPersonal] = useState({
     fullName: "",
@@ -71,10 +67,10 @@ const RecruitmentForm = () => {
     const educationText = education
       .map(
         (e, i) =>
-          `الدراسة ${i + 1}:
-الشهادة: ${e.degree}
-المؤسسة: ${e.institution}
-السنة: ${e.year}`
+          `Education ${i + 1}:
+Degree: ${e.degree}
+institution: ${e.institution}
+year: ${e.year}`
       )
       .join("\n\n");
 
@@ -82,9 +78,9 @@ const RecruitmentForm = () => {
       .map(
         (e, i) =>
           `Experience ${i + 1}:
-مكان العمل: ${e.company}
-الوظيفة: ${e.role}
-عدد سنوات الخبرة: ${e.years}`
+Company: ${e.company}
+Role: ${e.role}
+Years of Experience: ${e.years}`
       )
       .join("\n\n");
 
@@ -123,14 +119,14 @@ const RecruitmentForm = () => {
         {/* PERSONAL */}
         <Section title="Personal Information | المعلومات الشخصية">
           <Input label="Full Name | الاسم الكامل" className="text-black" name="fullName" onChange={handlePersonalChange} />
-         <Input label="Gender | الجنس" name="gender" className="text-black" onChange={handlePersonalChange} />
-          <Input label="Email | البريد الإلكتروني"  className="text-black" name="email" onChange={handlePersonalChange} />
+          <Input label="Gender | الجنس" name="gender" className="text-black" onChange={handlePersonalChange} />
+          <Input label="Email | البريد الإلكتروني" className="text-black" name="email" onChange={handlePersonalChange} />
           <Input label="Phone | الهاتف" name="phone" className="text-black" onChange={handlePersonalChange} />
-        
+
           <Input label="Place of Birth | محل الولادة" className="text-black" name="birthPlace" onChange={handlePersonalChange} />
           <Input label="Marital Status | الوضع العائلي" className="text-black" name="maritalStatus" onChange={handlePersonalChange} />
           <Input label="Address | عنوان السكن" className="text-black" name="address" onChange={handlePersonalChange} />
-          </Section>
+        </Section>
 
         {/* EDUCATION */}
         <Section title="Education | الدراسة">
