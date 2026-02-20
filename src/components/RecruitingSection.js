@@ -20,23 +20,17 @@ const RecruitingSection = () => {
         {/* Text Content */}
         <div className="md:w-1/2 p-8 flex flex-col justify-center">
           <h2 className="text-3xl font-bold text-blue-900 mb-4">
-            Your Gateway to New Career Opportunities
+           Daoud Harb Recruitment Agency -  Your Gateway to New Career Opportunities
           </h2>
 
-          <p className="text-gray-700 mb-6 text-justify">
-            Submit your CV and join our professional talent network.
-            We help connect skilled individuals with organizations seeking qualified candidates.
-          </p>
-
           <p className="text-gray-700 text-right mb-8" dir="rtl">
-            نحن دائمًا نبحث عن محترفين متميزين. يرجى تعبئة نموذج التوظيف وإرفاق السيرة الذاتية،
-            وسيقوم فريق التوظيف بالتواصل معكم عند توفر شواغر مناسبة.
+         اذا كنت ترغب بالحصول على وظيفة، سواء كنت طالب جامعي او صاحب اختصاص، يمكن لك تعبئة استمارة سريعة وسيقوم فريق التوظيف بالتواصل معكم لإجراء مقابلة وتأمين الوظيفة المناسبة.
           </p>
 
           {/* Button */}
           <Link to="/recruitment-form">
             <Button className="bg-blue-900 hover:bg-blue-800 text-white px-6 py-3 w-fit">
-              Apply for a Job
+              Apply for a Job | تعبئة استمارة طلب توظيف
             </Button>
           </Link>
         </div>
