@@ -56,8 +56,8 @@ const RecruitmentForm = () => {
   /* ---------------- EXPERIENCE ---------------- */
 
   const [experience, setExperience] = useState([
-    { company: "", role: "", years: "" },
-  ]);
+  { company: "", role: "", fromYear: "", toYear: "" },
+]);
 
   const updateExperience = (i, field, value) => {
     const updated = [...experience];
@@ -66,9 +66,11 @@ const RecruitmentForm = () => {
   };
 
   const addExperience = () => {
-    setExperience([...experience, { company: "", role: "", years: "" }]);
-  };
-
+  setExperience([
+    ...experience,
+    { company: "", role: "", fromYear: "", toYear: "" },
+  ]);
+};
   const removeExperience = (i) => {
     setExperience(experience.filter((_, index) => index !== i));
   };
@@ -131,15 +133,16 @@ const RecruitmentForm = () => {
 
   // Create HTML rows for experience
   const experienceRows = experience
-    .map(
-      (exp) => `
-      <tr>
-        <td>${exp.company}</td>
-        <td>${exp.role}</td>
-        <td>${exp.years}</td>
-      </tr>`
-    )
-    .join("");
+.map(
+(exp)=>`
+<tr>
+<td>${exp.company}</td>
+<td>${exp.role}</td>
+<td>${exp.fromYear}</td>
+<td>${exp.toYear}</td>
+</tr>`
+)
+.join("");
 
   const selectedJobs =
     jobs.join(", ") + (otherJob ? `, Other: ${otherJob}` : "");
@@ -171,7 +174,8 @@ const RecruitmentForm = () => {
          <form
         onSubmit={handleSubmit}
        className="w-full max-w-3xl bg-white p-4 md:p-10 rounded-xl shadow-lg space-y-6 text-black" >
-       <h1 className="text-2xl md:text-3xl font-bold text-left">    Job Application Form | استمارة التوظيف
+        <h1 className="text-2xl md:text-3xl font-bold text-center">
+          Job Application Form | استمارة التوظيف
         </h1>
 
         {/* PERSONAL */}
@@ -199,8 +203,8 @@ const RecruitmentForm = () => {
           {education.map((edu, i) => (
             <Box key={i}>
               <Input  required label="Degree | الشهادة التي تحملها" value={edu.degree} onChange={(e) => updateEducation(i, "degree", e.target.value)} />
-              <Input  required label="Institution | المؤسسة التي تخرجت منها" value={edu.institution} onChange={(e) => updateEducation(i, "institution", e.target.value)} />
-              <Input  required label="Year | سنة التخرج" value={edu.year} onChange={(e) => updateEducation(i, "year", e.target.value)} />
+              <Input  required label="Institution\University | المؤسسة\الجامعة التي تخرجت منها" value={edu.institution} onChange={(e) => updateEducation(i, "institution", e.target.value)} />
+              <Input  required label="Year of graduation | سنة التخرج" value={edu.year} onChange={(e) => updateEducation(i, "year", e.target.value)} />
               {education.length > 1 && <RemoveButton onClick={() => removeEducation(i)} />}
             </Box>
           ))}
@@ -208,13 +212,28 @@ const RecruitmentForm = () => {
         </Section>
 
         {/* EXPERIENCE */}
-        <Section title="Experience | الخبرة">
+        <Section title="Experience | الخبرة (Starting from the most recent)">
           {experience.map((exp, i) => (
             <Box key={i}>
               <Input  required label="Company | المؤسسة" value={exp.company} onChange={(e) => updateExperience(i, "company", e.target.value)} />
               <Input required  label="Role | الوظيفة" value={exp.role} onChange={(e) => updateExperience(i, "role", e.target.value)} />
-              <Input  required label="Years of Experience | عدد سنوات الخبرة " value={exp.years} onChange={(e) => updateExperience(i, "years", e.target.value)} />
-              {experience.length > 1 && <RemoveButton onClick={() => removeExperience(i)} />}
+           <div className="grid grid-cols-2 gap-3">
+
+<Input
+required
+label="From Year | من سنة"
+value={exp.fromYear}
+onChange={(e) => updateExperience(i,"fromYear",e.target.value)}
+/>
+
+<Input
+required
+label="To Year | إلى سنة"
+value={exp.toYear}
+onChange={(e) => updateExperience(i,"toYear",e.target.value)}
+/>
+
+</div>    {experience.length > 1 && <RemoveButton onClick={() => removeExperience(i)} />}
             </Box>
           ))}
           <AddButton onClick={addExperience} label="+ Add Experience" />
